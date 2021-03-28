@@ -1,7 +1,12 @@
-let P2 = 0
-let P1 = 0
 let P0 = 0
-music.setBuiltInSpeakerEnabled(true)
+let P1 = 0
+let P2 = 0
+input.onButtonPressed(Button.A, function () {
+    music.setBuiltInSpeakerEnabled(true)
+})
+input.onButtonPressed(Button.B, function () {
+    music.setBuiltInSpeakerEnabled(false)
+})
 basic.forever(function () {
     P0 = pins.analogReadPin(AnalogPin.P0)
     P1 = pins.analogReadPin(AnalogPin.P1)
